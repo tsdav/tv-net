@@ -14,7 +14,7 @@ class HomeController extends Controller
     /**
      * @return Application|Factory|View|RedirectResponse|Redirector
      */
-    public function index()
+    public function index(): Factory|View|Redirector|Application|RedirectResponse
     {
         $url = 'https://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 

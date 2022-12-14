@@ -20,4 +20,5 @@ Route::get('/package', ['as' => 'packages', 'uses' => 'App\Http\Controllers\Home
 Route::get('/about', ['as' => 'about', 'uses' => 'App\Http\Controllers\HomeController@index']);
 Route::get('/reports', ['as' => 'reports', 'uses' => 'App\Http\Controllers\HomeController@index']);
 Route::get('/jobs', ['as' => 'jobs', 'uses' => 'App\Http\Controllers\HomeController@index']);
+Route::post('/upload-report', ['as' => 'upload.report', 'uses' => 'App\Http\Controllers\AdminPanel\ReportsController@createReport']);
 //Route::get('/404', ['as' => '404', 'uses' => 'MenuController@notFound']);
