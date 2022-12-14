@@ -19,4 +19,5 @@ Route::get('/service', ['as' => 'service', 'uses' => 'App\Http\Controllers\HomeC
 Route::get('/package', ['as' => 'packages', 'uses' => 'App\Http\Controllers\HomeController@index']);
 Route::get('/about', ['as' => 'about', 'uses' => 'App\Http\Controllers\HomeController@index']);
 Route::get('/reports', ['as' => 'reports', 'uses' => 'App\Http\Controllers\HomeController@index']);
+Route::get('/jobs', ['as' => 'jobs', 'uses' => 'App\Http\Controllers\HomeController@index']);
 //Route::get('/404', ['as' => '404', 'uses' => 'MenuController@notFound']);
