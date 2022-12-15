@@ -1,21 +1,11 @@
-<div class="table-responsive">
-    <table class="table table-striped table-bordered">
-        <tr>
-            <th >ID</th>
-            <th >Name</th>
-            <th >Date</th>
-            <th >File</th>
-        </tr>
-        @foreach($reports as $row)
-            <tr>
-                <td>{{ $row->id }}</td>
-                <td>{{ $row->report_name }}</td>
-                <td>{{ $row->report_date }}</td>
-                <td><a href="{{ url('public/storage/reports/report/report_' . $row->report_name . '/' . $row->file_name ) }}">{{ $row->file_name }}</a></td>
-            </tr>
-        @endforeach
-    </table>
-
-    {!! $reports->links() !!}
+<div class="single-report-container" data-url="{{ asset($report->path) }}">
+    <div>
+        <span class="single-report-name">{{ $report->report_name }}</span>
+        <span>{{$technicalData}}</span>
+    </div>
+    <div>
+        <span>{{ $report->report_date }}</span>
+        <a href="{{ asset($report->path) }}" target="_blank" download="{{ $report->report_name }}"><i
+                class="fa fa-download" data-redirect="false"></i></a>
+    </div>
 </div>
-

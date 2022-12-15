@@ -10,19 +10,21 @@
 @endphp
 <div class="menu-container">
     <div class="menu-container-items">
-        <div class="logo-container">
-            <a href="{{route('home')}}" class="home_href">
-                <img src="{{asset('/images/logo.png')}}" alt="logo">
-            </a>
-        </div>
-        <div class="mainMenu-items-container link-containers">
-            @foreach($menuArray as $route => $singleMenu)
-                <li {{$currentRoute === $route ? 'class=active' : ''}}>
-                    <a href="{{route($route)}}">
-                        {{$singleMenu}}
-                    </a>
-                </li>
-            @endforeach
+        <div class="left-menu-item">
+            <div class="logo-container">
+                <a href="{{route('home')}}" class="home_href">
+                    <img src="{{asset('/images/logo.png')}}" alt="logo">
+                </a>
+            </div>
+            <div class="mainMenu-items-container link-containers">
+                @foreach($menuArray as $route => $singleMenu)
+                    <li {{$currentRoute === $route ? 'class=active' : ''}}>
+                        <a href="{{route($route)}}">
+                            {{$singleMenu}}
+                        </a>
+                    </li>
+                @endforeach
+            </div>
         </div>
         <div class="phone-container">
             <i class='fa fa-phone'></i>

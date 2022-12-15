@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Interfaces\ReportRepositoryInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
 
 class ReportsController extends Controller
@@ -27,9 +28,14 @@ class ReportsController extends Controller
             ]);
         }
 
+        foreach ($reports as $report) {
+            $report->path = 'storage/reports/report_' . $report->report_name . '/' . $report->file_name;
+            $report->report_date = date('Y.m.d', strtotime($report->report_date));
+        }
+
         return view('web/reports', [
             'reports' => $reports,
-            'title' => '123'
+            'title' => 'Հաշվետվություններ'
         ]);
     }
 
