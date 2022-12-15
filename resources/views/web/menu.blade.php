@@ -15,7 +15,7 @@
                 <img src="{{asset('/images/logo.png')}}" alt="logo">
             </a>
         </div>
-        <div class="mainMenu-items-container">
+        <div class="mainMenu-items-container link-containers">
             @foreach($menuArray as $route => $singleMenu)
                 <li {{$currentRoute === $route ? 'class=active' : ''}}>
                     <a href="{{route($route)}}">

@@ -1,26 +1,64 @@
+@php
+    $menuArray = [
+        'service' => 'Ծառայություններ',
+        'privacy' =>  'Գաղտնիություն',
+        'blog' =>  'Բլոգ',
+        'reports' =>  'Հաշվետվություններ'
+    ];
+
+    $menuArray2 = [
+        'about' => 'Հետադարձ կապ',
+        'jobs' =>  'Աշխատանքներ',
+        'packages' =>  'Փաթեթներ'
+    ];
+
+    $subscribe = 'Բաժանորդագրվեք նորությունների համար';
+    $subscribeButton = 'Բաժանորդագրվել';
+    $contact = 'Կապ';
+@endphp
+
 <div class="footer-container">
     <div class="footer-items-container">
-        <div class="footer-container-link-names">
-            <div>
-                <h1>1111111</h1>
-                <h1>1111111</h1>
-                <h1>1111111</h1>
-                <h1>1111111</h1>
-                <h1>1111111</h1>
+        <div class="footer-container-link-names link-containers">
+            <div class="footer-columns-container">
+                <h2>TvNet</h2>
+                @foreach($menuArray as $route => $singleMenu)
+                    <li>
+                        <a href="{{route($route)}}">
+                            {{$singleMenu}}
+                        </a>
+                    </li>
+                @endforeach
             </div>
-            <div>
-                <h1>1111111</h1>
-                <h1>1111111</h1>
-                <h1>1111111</h1>
-                <h1>1111111</h1>
-                <h1>1111111</h1>
+            <div class="footer-columns-container">
+                <h2>{{$contact}}</h2>
+                @foreach($menuArray2 as $route => $singleMenu)
+                    <li>
+                        <a href="{{route($route)}}">
+                            {{$singleMenu}}
+                        </a>
+                    </li>
+                @endforeach
+                <li>
+                    <a href="mailto:@">
+                        Mail Here
+                    </a>
+                </li>
             </div>
-            <div>
-                <h1>1111111</h1>
-                <h1>1111111</h1>
-                <h1>1111111</h1>
-                <h1>1111111</h1>
-                <h1>1111111</h1>
+            <div class="footer-columns-container footer-subscriber">
+                <h3>{{$subscribe}}</h3>
+                <div class="footer-subscriber-container">
+                    <input type="email" class="subscriber-email" placeholder="Email">
+                    <button type="submit" id="subscriber_submit">{{$subscribeButton}}</button>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com" class="home_href" target="_blank">
+                        <img src="{{asset('/images/instagram.png')}}" alt="logo">
+                    </a>
+                    <a href="https://www.facebook.com/tvnet.am/" class="home_href" target="_blank">
+                        <img src="{{asset('/images/facebook.png')}}" alt="logo">
+                    </a>
+                </div>
             </div>
         </div>
         <div class="footer-container-logo">
@@ -28,8 +66,9 @@
                 <img src="{{asset('/images/logo.png')}}" alt="logo">
             </a>
         </div>
+        <hr class="footer-divider">
         <div class="footer-container-copy-rights">
-            <span>© 2022  TvNet.am</span>
+            <span class="footer-copyRight">© 2022  TvNet.am</span>
         </div>
     </div>
 </div>
