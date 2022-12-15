@@ -6,8 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ReportRequest;
 use App\Http\Services\ReportFileUploaderService;
 use App\Interfaces\ReportRepositoryInterface;
-use App\Models\Report;
-use App\Repositories\ReportRepository;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Client\Request;
 use Illuminate\Http\JsonResponse;
 
@@ -28,15 +27,30 @@ class ReportsController extends Controller
         $this->reportRepository = $reportRepository;
     }
 
+    public function uploadReportForm(): View
+    {
+        return view('admin/upload_report');
+    }
+
     /**
      * @param ReportRequest $request
      * @return JsonResponse
      */
     public function createReport(ReportRequest $request): JsonResponse
     {
-        $this->reportRepository->createReport($request->all());
-
         $reportFileName = $this->reportFileUploaderService->uploadReportFile($request);
+        if (!$reportFileName) {
+            return response()->json([
+                'status' => false,
+                'message' => 'could not upload file!'
+            ]);
+        }
+
+        $reportDetails = $request->all();
+        unset($reportDetails['report_file']);
+        $reportDetails['file_name'] = $reportFileName;
+
+        $this->reportRepository->createReport($reportDetails);
 
         return response()->json([
             'status' => true,

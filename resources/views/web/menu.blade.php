@@ -3,7 +3,7 @@
         'service' => 'Ծառայություններ',
         'packages' =>  'Փաթեթներ',
         'about' =>  'Մեր մասին',
-        'reports' =>  'Հաշվետվություններ'
+        'web.reports' =>  'Հաշվետվություններ'
     ];
 
     $currentRoute = \Illuminate\Support\Facades\Route::currentRouteName();
