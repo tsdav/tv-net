@@ -66,7 +66,6 @@
                 <img src="{{asset('/images/logo.png')}}" alt="logo">
             </a>
         </div>
-        <hr class="footer-divider">
         <div class="footer-container-copy-rights">
             <span class="footer-copyRight">© 2022  TvNet.am</span>
         </div>
