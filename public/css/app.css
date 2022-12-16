@@ -185,6 +185,23 @@ li{
     outline: none;
 }
 
+.abouts-content-container input {
+    width: 200px;
+    height: 35px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #62626A;
+    padding: 1px 0 1px 8px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.abouts-content-container label {
+    display: block;
+}
+
 .footer-subscriber .footer-subscriber-container {
     display: flex;
     align-items: center;
@@ -491,13 +508,53 @@ li{
 .abouts-content-container {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
+    padding-top: 70px;
+    padding-left: 300px;
 }
 
-.abouts-content-container div {
-    width: 100%;
+.abouts-content-container .about-content{
+    max-width: 1000px;
     min-height: 200px;
-    background: red;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.abouts-content-container .contact-us-form-container{
+    max-width: 1000px;
+    min-height: 200px;
     margin-bottom: 50px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.abouts-content-container .main-about-content {
+    margin-left: 30px;
+}
+
+
+.abouts-content-container .about-content .about-image-container img{
+    width: 300px;
+}
+
+.abouts-content-container .contact-image-container img{
+    width: 300px;
+}
+
+.abouts-content-container .main-about-content h1{
+    text-align: center;
+}
+.abouts-content-container .main-about-content h2{
+    text-align: center;
+}
+
+.abouts-content-container .main-about-content span{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #424242;
 }
