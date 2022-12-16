@@ -21,7 +21,7 @@ Route::get('/index', ['as' => 'home', 'uses' => 'App\Http\Controllers\HomeContro
 Route::get('/', ['as' => 'home', 'uses' => 'App\Http\Controllers\HomeController@index']);
 Route::get('/service', ['as' => 'service', 'uses' => 'App\Http\Controllers\HomeController@index']);
 Route::get('/package', ['as' => 'packages', 'uses' => 'App\Http\Controllers\HomeController@index']);
-Route::get('/about', ['as' => 'about', 'uses' => 'App\Http\Controllers\HomeController@index']);
+Route::get('/about', ['as' => 'about', 'uses' => 'App\Http\Controllers\AboutController@index']);
 Route::get('/jobs', ['as' => 'jobs', 'uses' => 'App\Http\Controllers\HomeController@index']);
 Route::get('/privacy', ['as' => 'privacy', 'uses' => 'App\Http\Controllers\HomeController@index']);
 Route::get('/blog', ['as' => 'blog', 'uses' => 'App\Http\Controllers\HomeController@index']);

@@ -174,7 +174,7 @@ li{
 
 .footer-subscriber .subscriber-email {
     width: 200px;
-    height: 24px;
+    height: 35px;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -271,6 +271,14 @@ li{
     padding: 10px 150px;
 }
 
+.home-content-container .home-choose {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 150px;
+}
+
 .home-content-container .services-container {
     display: flex;
     justify-content: center;
@@ -279,12 +287,20 @@ li{
     flex-wrap: wrap;
 }
 
+.home-content-container .choose-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
 .home-content-container .home-achievements {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
+    padding: 0 200px;
     height: 300px;
 }
 
@@ -296,10 +312,26 @@ li{
     width: 100%;
     height: 100%;
     background: linear-gradient(90.89deg, #456FE8 9.11%, #19B0EC 92.08%);
+    color: white;
 }
 
-.home-content-container .home-services h1 {
-    display: block;
+.home-content-container .achievements-column-container h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+}
+
+.home-content-container .achievements-column-container {
+    min-width: 400px;
+    text-align: center;
+}
+
+.home-content-container .achievements-column-container h4 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
 }
 
 .home-content-container .single-service {
@@ -315,9 +347,33 @@ li{
     padding: 20px;
 }
 
+.home-content-container .single-choose {
+    background: #FFFFFF;
+    border: 1px solid #42A5F5;
+    max-width: 250px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    padding: 20px 20px 120px;
+    text-align: center;
+    background: linear-gradient(0deg, #1E88E5 3.82%, rgba(255, 255, 255, 0) 49.4%);
+}
+
 .home-content-container .single-service h3{
     margin-bottom: 5px;
     margin-top: 0;
+}
+
+.home-content-container .single-choose h3{
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
 }
 
 .home-content-container .single-service h4{
@@ -336,4 +392,112 @@ li{
     border-radius: 10px;
     width: 75px;
     height: 35px;
+}
+
+.home-content-container .home-available {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 100px;
+    height: 800px;
+    background: url("/images/available.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.home-content-container .available-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+
+.home-content-container .available-container div {
+    padding: 0 150px;
+}
+
+.home-content-container .available-container .map-container {
+    width: 400px;
+    height: 400px;
+}
+
+
+.home-content-container .available-container .locations-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.home-content-container .available-container .locations-container .locations-block {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    max-height: 30px;
+}
+
+
+.home-content-container .available-container .locations-container .locations-block .locations-block-items{
+    padding: 2px 15px !important;
+    height: 100%;
+}
+
+.home-content-container .available-container .locations-container .locations-block .locations-block-items h4{
+    margin: 0;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+
+.home-content-container .available-container .locations-container .locations-block button {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 80px;
+    height: 45px;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+}
+
+.home-content-container .available-container .locations-container .customer-container {
+    color: white;
+}
+
+.home-content-container .available-container .locations-container .customer-container a{
+    color: white;
+}
+
+.home-content-container .available-container .locations-container .customer-container h4{
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.fa-map-marker {
+    color: white;
+}
+.icons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.abouts-content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.abouts-content-container div {
+    width: 100%;
+    min-height: 200px;
+    background: red;
+    margin-bottom: 50px;
 }
