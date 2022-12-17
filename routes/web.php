@@ -13,8 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::prefix('admin')->group(function () {
-    Route::post('/upload-report', ['as' => 'upload.report', 'uses' => 'App\Http\Controllers\AdminPanel\ReportsController@createReport']);
-    Route::get('/report', ['as' => 'admin.report', 'uses' => 'App\Http\Controllers\AdminPanel\ReportsController@uploadReportForm']) ;
+    Route::get('/', ['as' => 'login', 'uses' => 'App\Http\Controllers\AdminPanel\AdminController@login']);
+    Route::post('/authorize', ['as' => 'admin.auth', 'uses' => 'App\Http\Controllers\AdminPanel\AdminController@authenticate']);
+
+    Route::middleware('adminLogged')->group(function () {
+        Route::get('/dashboard', ['as' => 'admin.dashboard', 'uses' => 'App\Http\Controllers\AdminPanel\AdminController@index']);
+        Route::post('/upload-report', ['as' => 'upload.report', 'uses' => 'App\Http\Controllers\AdminPanel\ReportsController@createReport']);
+        Route::get('/report', ['as' => 'admin.report', 'uses' => 'App\Http\Controllers\AdminPanel\ReportsController@uploadReportForm']);
+    });
 });
 
 Route::get('/index', ['as' => 'home', 'uses' => 'App\Http\Controllers\HomeController@index']);

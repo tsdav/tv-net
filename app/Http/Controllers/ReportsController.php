@@ -19,9 +19,13 @@ class ReportsController extends Controller
         $this->reportRepository = $reportRepository;
     }
 
+    /**
+     * @param Request $request
+     * @return View
+     */
     public function getReportsAjax(Request $request) : View
     {
-        $reports = $this->reportRepository->getReportsByCount(1);
+        $reports = $this->reportRepository->getReportsByCount(5);
         if ($request->ajax()) {
             return view('web/report_data', [
                 'reports' => $reports
@@ -38,6 +42,4 @@ class ReportsController extends Controller
             'title' => 'Հաշվետվություններ'
         ]);
     }
-
-
 }
