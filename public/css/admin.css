@@ -277,4 +277,14 @@ ul ul a {
 .is--invalid {
     border: 2px solid red;
 }
+.create-package {
+    float: right;
+}
 
+a.create-package-link {
+    color: #456FE8;
+}
+
+a.create-package-link:hover {
+    text-decoration: underline;
+}

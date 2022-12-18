@@ -29,7 +29,9 @@ class ReportsController extends Controller
 
     public function uploadReportForm(): View
     {
-        return view('admin/upload_report');
+        return view('admin/home', [
+            'title' => 'Reports'
+        ]);
     }
 
     /**

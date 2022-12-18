@@ -41,6 +41,5 @@ function sendRequest(url) {
                 alert("uploaded successfully")
             }
         })
-
     })
 }

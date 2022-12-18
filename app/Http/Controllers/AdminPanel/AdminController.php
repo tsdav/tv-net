@@ -61,6 +61,6 @@ class AdminController extends Controller
         $request->session()->put('adminLoggedIn', true);
         $request->session()->put('admin', $admin);
 
-        return redirect()->route('admin.dashboard');
+        return redirect()->route('admin.report');
     }
 }

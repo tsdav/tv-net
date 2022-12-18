@@ -18,3 +18,7 @@
         <button type="submit" name="update" id="upload-report" class="btn btn-danger">Փոփոխել</button>
     </form>
 @endsection
+@section('scripts')
+    <script> var url = '{{route('upload.report')}}'</script>
+    <script src="{{asset('js/admin/formHandler.js')}}"></script>
+@endsection

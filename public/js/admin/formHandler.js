@@ -39,9 +39,9 @@ function sendRequest(url, data) {
         console.log(res);
         if (res.status === true) {
             alert("uploaded successfully");
-            $("#report-name").val('');
-            $("#report-date").val('');
-            $("#report-file").val('');
+            $('.form_input').each(function (item) {
+                $(this).val('');
+            });
         }
     })
 }

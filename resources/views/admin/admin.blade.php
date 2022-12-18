@@ -1,6 +1,7 @@
 @extends('admin.base')
 @section('content')
-<div class="wrapper">
+    @php $admin = session()->get('admin', ''); @endphp
+    <div class="wrapper">
     @php
         $currentRoute = \Illuminate\Support\Facades\Route::currentRouteName();
     @endphp
@@ -9,11 +10,9 @@
             <h3>TvNet AdminPanel</h3>
         </div>
         <ul class="list-unstyled components">
-            <li><a href="{{ route('admin.report') }}" @php if(\Illuminate\Support\Facades\Route::currentRouteName() == 'admin.dashboard') echo "class='active'" @endphp>Հաշվետվություններ</a></li>
-            <li><a href="#"  @php if(\Illuminate\Support\Facades\Route::currentRouteName() == 'admin.jobs') echo "class='active'" @endphp>Թափուր հաստիքներ</a></li>
-            <li><a href="#"  @php if(\Illuminate\Support\Facades\Route::currentRouteName() == 'admin.blog') echo "class='active'" @endphp>Բլոգ</a></li>
-            <li><a href="#"  @php if(\Illuminate\Support\Facades\Route::currentRouteName() == 'admin.services') echo "class='active'" @endphp>Սերվիսներ</a></li>
-            <li><a href="#"  @php if(\Illuminate\Support\Facades\Route::currentRouteName() == 'admin.packages') echo "class='active'" @endphp>Փաթեթներ</a></li>
+            <li><a href="{{ route('admin.report') }}" @php if(\Illuminate\Support\Facades\Route::currentRouteName() == 'admin.report') echo "class='active'" @endphp>Հաշվետվություններ</a></li>
+            <li><a href="{{ route('admin.services') }}"  @php if(\Illuminate\Support\Facades\Route::currentRouteName() == 'admin.services') echo "class='active'" @endphp>Սերվիսներ</a></li>
+            <li><a href="{{ route('admin.packages') }}"  @php if(\Illuminate\Support\Facades\Route::currentRouteName() == 'admin.packages') echo "class='active'" @endphp>Փաթեթներ</a></li>
         </ul>
     </nav>
     <div id="content">
@@ -44,6 +43,5 @@
 
         });
     </script>
-    <script> var url = '{{route('upload.report')}}'</script>
-    <script src="{{asset('js/admin/formHandler.js')}}"></script>
+
 @endsection
