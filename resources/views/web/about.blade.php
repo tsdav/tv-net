@@ -26,22 +26,22 @@
                 </span>
             </div>
         </div>
-        <div class="contact-us-form-container">
-            <div class="contact-image-container">
-                <img src="{{ asset('images/contact.png') }}" alt="">
-            </div>
-            <div class="main-about-content">
-                <h1>Contact with us</h1>
-                <form action="#">
-                    <label for="name">Full Name</label>
-                    <input type="email" class="subscriber-email" placeholder="Email">
-                    <label for="name">Full Name</label>
-                    <input type="text" name="name" id="name" placeholder="Full Name">
-                    <label for="name">Full Name</label>
-                    <input type="text" name="name" id="name" placeholder="Full Name">
-                </form>
-            </div>
-        </div>
+{{--        <div class="contact-us-form-container">--}}
+{{--            <div class="contact-image-container">--}}
+{{--                <img src="{{ asset('images/contact.png') }}" alt="">--}}
+{{--            </div>--}}
+{{--            <div class="main-about-content">--}}
+{{--                <h1>Contact with us</h1>--}}
+{{--                <form action="#">--}}
+{{--                    <label for="name">Full Name</label>--}}
+{{--                    <input type="email" class="subscriber-email" placeholder="Email">--}}
+{{--                    <label for="name">Full Name</label>--}}
+{{--                    <input type="text" name="name" id="name" placeholder="Full Name">--}}
+{{--                    <label for="name">Full Name</label>--}}
+{{--                    <input type="text" name="name" id="name" placeholder="Full Name">--}}
+{{--                </form>--}}
+{{--            </div>--}}
+{{--        </div>--}}
     </div>
 @endsection
 @section('scripts')
