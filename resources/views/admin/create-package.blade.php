@@ -11,18 +11,18 @@
         @csrf
         <p class="important">*-ով նշվածները պարտադիր են!</p>
         <div class="form-group">
-            <label for="report-name">Item Name<span class="important">*</span></label>
+            <label for="report-name">Անուն <span class="important">*</span></label>
             <input type="text" class="form_input" id="report-name" name="{{ $itemType }}_name" value="{{ $itemName ?? '' }}">
         </div>
         <div class="form-group">
-            <label for="report-date">Item Description<span class="important">*</span></label>
+            <label for="report-date">Նկարագրություն<span class="important">*</span></label>
             <input type="text" class="form_input" id="report-date" name="{{ $itemType }}_description" value="{{ $itemDescription ?? '' }}">
         </div>
         <div class="form-group">
-            <label for="report-file">Item Details<span class="important">*</span></label>
+            <label for="report-file">Մանրամասներ<span class="important">*</span></label>
             <textarea name="{{ $itemType }}_details" class="form_input" id="" cols="30" rows="10">{{ $itemDetails ?? '' }}</textarea>
         </div>
-        <button type="submit" name="update" id="upload-report" class="btn btn-danger">{{ isset($itemName) ? 'Update' : 'Create' }}</button>
+        <button type="submit" name="update" id="upload-report" class="btn btn-danger">{{ isset($itemName) ? 'Փոփոխել' : 'Ստեղծել' }}</button>
     </form>
 @endsection
 @section('scripts')

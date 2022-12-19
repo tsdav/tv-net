@@ -19,7 +19,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color: black	;">
             <div class="container-fluid">
                 <div class="float-left" style="color: white;">
-                    <span>Hi, </span>
+                    <span>Բարև, </span>
                     <i class="fa fa-user" ></i>
                     <span class="navbar-brand">{{$admin->first_name}}</span>
                 </div>

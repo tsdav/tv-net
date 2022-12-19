@@ -4,18 +4,18 @@
         @csrf
         <p class="important">*-ով նշվածները պարտադիր են!</p>
         <div class="form-group">
-            <label for="report-name">Report Name<span class="important">*</span></label>
+            <label for="report-name">Անուն<span class="important">*</span></label>
             <input type="text" class="form_input" id="report-name" name="report_name">
         </div>
         <div class="form-group">
-            <label for="report-date">Report Date<span class="important">*</span></label>
+            <label for="report-date">Ամսաթիվ<span class="important">*</span></label>
             <input type="date" class="form_input" id="report-date" name="report_date">
         </div>
         <div class="form-group">
-            <label for="report-file">Report File<span class="important">*</span></label>
+            <label for="report-file">Հաշվետվություն<span class="important">*</span></label>
             <input type="file" class="form_input" id="report-file" name="report_file" accept=".doc,.docx,.pdf">
         </div>
-        <button type="submit" name="update" id="upload-report" class="btn btn-danger">Փոփոխել</button>
+        <button type="submit" name="update" id="upload-report" class="btn btn-danger">Ստեղծել</button>
     </form>
 @endsection
 @section('scripts')
