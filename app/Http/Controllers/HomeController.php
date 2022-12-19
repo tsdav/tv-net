@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Repositories\ServiceRepository;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -11,6 +12,18 @@ use Illuminate\Routing\Redirector;
 
 class HomeController extends Controller
 {
+
+    private ServiceRepository $serviceRepository;
+
+    /**
+     * @param ServiceRepository $serviceRepository
+     */
+    public function __construct(ServiceRepository $serviceRepository)
+    {
+        $this->serviceRepository = $serviceRepository;
+    }
+
+
     /**
      * @return Application|Factory|View|RedirectResponse|Redirector
      */
@@ -23,7 +36,8 @@ class HomeController extends Controller
         }
 
         return view('web/home', [
-            'title' => 'home'
+            'title' => 'home',
+            'services' => $this->serviceRepository->getAllItems()
         ]);
     }
 }

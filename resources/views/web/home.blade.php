@@ -10,30 +10,20 @@
         <div class="home-services">
             <h1>Services</h1>
             <div class="services-container">
+                @forelse($services as $service)
                 <div class="single-service">
                     <img src="{{asset('/images/service.png')}}" alt="logo">
-                    <h3>TV + Internet</h3>
-                    <h4>Fixed Internet & Digital Channels</h4>
-                    <button>Details</button>
+                    <h3>{{ $service->service_name }}</h3>
+                    <h4>{{ $service->service_description }}</h4>
                 </div>
-                <div class="single-service">
-                    <img src="{{asset('/images/service.png')}}" alt="logo">
-                    <h3>TV + Internet</h3>
-                    <h4>Fixed Internet & Digital Channels</h4>
-                    <button>Details</button>
-                </div>
-                <div class="single-service">
-                    <img src="{{asset('/images/service.png')}}" alt="logo">
-                    <h3>TV + Internet</h3>
-                    <h4>Fixed Internet & Digital Channels</h4>
-                    <button>Details</button>
-                </div>
-                <div class="single-service">
-                    <img src="{{asset('/images/service.png')}}" alt="logo">
-                    <h3>TV + Internet</h3>
-                    <h4>Fixed Internet & Digital Channels</h4>
-                    <button>Details</button>
-                </div>
+                @empty
+                    <div class="single-service">
+                        <img src="{{asset('/images/service.png')}}" alt="logo">
+                        <h3>TV + Internet</h3>
+                        <h4>Fixed Internet & Digital Channels</h4>
+                        <button>Details</button>
+                    </div>
+                @endforelse
             </div>
         </div>
         <div class="home-achievements">
