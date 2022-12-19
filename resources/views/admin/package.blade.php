@@ -1,7 +1,7 @@
 @extends('admin.admin')
 @section('page')
     <div class="create-package">
-        <a href="{{ route($createRoute) }}" class="create-package-link">Create Item</a>
+        <a href="{{ route($formRoute) }}" class="create-package-link">Create Item</a>
     </div>
     @forelse($items as $item)
     <div class="services-container flip-card">

@@ -41,6 +41,7 @@ class ServiceController
             'title' => 'Services',
             'items' => $resultServices,
             'createRoute' => 'admin.services.create',
+            'formRoute' => 'admin.services.form',
             'updateRoute' => 'admin.services.edit',
             'detailRoute' => 'admin.services.show',
             'itemType' => 'service'
@@ -53,6 +54,7 @@ class ServiceController
             'title' => 'Create Service',
             'createRoute' => 'admin.services.create',
             'updateRoute' => 'admin.services.edit',
+            'formRoute' => 'admin.services.form',
             'detailRoute' => 'admin.services.show',
             'itemType' => 'service'
 
@@ -101,6 +103,7 @@ class ServiceController
             'createRoute' => 'admin.services.create',
             'updateRoute' => 'admin.services.edit',
             'detailRoute' => 'admin.services.show',
+            'formRoute' => 'admin.services.form',
             'itemType' => 'service'
         ]);
     }

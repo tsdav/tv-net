@@ -44,6 +44,7 @@ class PackageController extends Controller
             'createRoute' => 'admin.packages.create',
             'updateRoute' => 'admin.packages.edit',
             'detailRoute' => 'admin.packages.show',
+            'formRoute' => 'admin.packages.form',
             'itemType' => 'package'
         ]);
     }
@@ -55,6 +56,7 @@ class PackageController extends Controller
             'createRoute' => 'admin.packages.create',
             'updateRoute' => 'admin.packages.edit',
             'detailRoute' => 'admin.packages.show',
+            'formRoute' => 'admin.packages.form',
             'itemType' => 'package'
         ]);
     }
@@ -75,6 +77,7 @@ class PackageController extends Controller
             'createRoute' => 'admin.packages.create',
             'updateRoute' => 'admin.packages.edit',
             'detailRoute' => 'admin.packages.show',
+            'formRoute' => 'admin.packages.form',
             'itemType' => 'package'
         ]);
     }
