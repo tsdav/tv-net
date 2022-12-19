@@ -345,7 +345,6 @@ li{
     align-items: center;
     flex-direction: column;
     width: 100%;
-    padding: 0 200px;
     height: 300px;
 }
 
@@ -460,7 +459,6 @@ li{
     align-items: center;
     flex-direction: column;
     width: 100%;
-    padding: 0 100px;
     height: 800px;
     background: url("/images/available.png");
     background-repeat: no-repeat;
@@ -643,3 +641,32 @@ li{
     color: white;
     transform: rotateY(180deg);
 }
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.pagination span {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination .active span{
+    background-color: #1E88E5;
+    color: white;
+}
+
+.pagination .active a{
+    background-color: #1E88E5;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}

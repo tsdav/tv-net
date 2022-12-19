@@ -28,6 +28,7 @@ class ReportsController extends Controller
         $reports = $this->reportRepository->getReportsByCount(5);
         if ($request->ajax()) {
             return view('web/report_data', [
+                'title' => 'Հաշվետվություններ',
                 'reports' => $reports
             ]);
         }
