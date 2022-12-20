@@ -298,10 +298,14 @@ li{
     flex-direction: row;
 }
 
+.service-packages-content-container .packages-subTitle {
+    margin: 0;
+}
+
 .service-packages-content-container .packages {
     display: flex;
     align-items: center;
-    min-height: 500px;
+    min-height: 450px;
     justify-content: center;
     flex-direction: row;
 }
