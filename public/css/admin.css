@@ -288,3 +288,11 @@ a.create-package-link {
 a.create-package-link:hover {
     text-decoration: underline;
 }
+
+#page .services-container {
+    max-width: 350px;
+    display: inline-block;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #0DB8DE;
+}
