@@ -27,8 +27,9 @@ class AdminController extends Controller
 
     /**
      * @param Request $request
+     * @return Application|Factory|View
      */
-    public function index(Request $request)
+    public function index(Request $request): View|Factory|Application
     {
         return view('admin.home', [
             'title' => 'AdminPanel',

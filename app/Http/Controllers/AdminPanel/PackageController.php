@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\PackageRequest;
 use App\Interfaces\TvNetRepositoryInterface;
 use App\Repositories\PackageRepository;
+use App\Repositories\ServiceRepository;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -14,12 +15,16 @@ class PackageController extends Controller
 {
     private PackageRepository $packageRepository;
 
+    private ServiceRepository $serviceRepository;
+
     /**
      * @param PackageRepository $packageRepository
      */
-    public function __construct(PackageRepository $packageRepository)
+    public function __construct(PackageRepository $packageRepository,
+                                ServiceRepository $serviceRepository)
     {
         $this->packageRepository = $packageRepository;
+        $this->serviceRepository = $serviceRepository;
     }
 
 
@@ -53,6 +58,7 @@ class PackageController extends Controller
     {
         return view('admin/create-package', [
             'title' => 'Create Package',
+            'services' => $this->serviceRepository->getAllItems(),
             'createRoute' => 'admin.packages.create',
             'updateRoute' => 'admin.packages.edit',
             'detailRoute' => 'admin.packages.show',
@@ -64,6 +70,7 @@ class PackageController extends Controller
     public function getPackage(Request $request, int $id) : View
     {
         $package = $this->packageRepository->getItemById($id);
+        $services = $this->serviceRepository->getAllItems();
 
         $formattedItem['id'] = $package->id;
         $formattedItem['itemName'] = $package->package_name;
@@ -74,6 +81,8 @@ class PackageController extends Controller
         return view('admin/create-package', [
             'title' => 'Update Item',
             'item' => $formattedItem,
+            'services' => $services,
+            'selectedServiceId' => $package->services->id,
             'createRoute' => 'admin.packages.create',
             'updateRoute' => 'admin.packages.edit',
             'detailRoute' => 'admin.packages.show',

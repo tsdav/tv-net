@@ -27,10 +27,16 @@ class PackageController extends Controller
      */
     public function index(): Factory|View|Redirector|Application|RedirectResponse
     {
-        $packages = $this->packageRepository->getAllItems();
+        $packages = $this->packageRepository->getPackagesWithService();
+
+        $result = [];
+        foreach ($packages as $package) {
+            $result[$package->services->service_name][] = $package;
+        }
+
         return view('web/packages', [
             'title' => 'package',
-            'packages' => $packages
+            'packages' => $result
         ]);
     }
 }

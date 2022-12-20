@@ -26,7 +26,8 @@ class PackageRequest extends FormRequest
         return [
             'package_name' => 'required|string',
             'package_description' => 'required|string',
-            'package_details' => 'required|string'
+            'package_details' => 'required|string',
+            'service_id' => 'required|numeric'
         ];
     }
 }

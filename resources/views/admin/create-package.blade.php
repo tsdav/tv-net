@@ -18,6 +18,16 @@
             <label for="report-date">Նկարագրություն<span class="important">*</span></label>
             <input type="text" class="form_input" id="report-date" name="{{ $itemType }}_description" value="{{ $itemDescription ?? '' }}">
         </div>
+        @if($itemType == 'package')
+            <div class="form-group">
+                <label for="service">Ծառայություն<span class="important">*</span></label>
+                <select name="service_id" id="service">
+                    @foreach($services as $service)
+                        <option value="{{ $service->id }}" @if(isset($selectedServiceId) && $selectedServiceId == $service->id) {{ 'selected' }} @endif> {{ $service->service_name }}</option>
+                    @endforeach
+                </select>
+            </div>
+        @endif
         <div class="form-group">
             <label for="report-file">Մանրամասներ<span class="important">*</span></label>
             <textarea name="{{ $itemType }}_details" class="form_input" id="" cols="30" rows="10">{{ $itemDetails ?? '' }}</textarea>

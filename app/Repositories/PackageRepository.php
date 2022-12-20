@@ -5,6 +5,7 @@ namespace App\Repositories;
 use App\Interfaces\TvNetRepositoryInterface;
 use App\Models\Package;
 use App\Models\Service;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,9 +17,9 @@ class PackageRepository implements TvNetRepositoryInterface
         return Package::all();
     }
 
-    public function getItemById(int $id)
+    public function getItemById(int $id): Model|Collection|Builder|array|null
     {
-        return Package::findOrFail($id);
+        return Package::with('services')->findOrFail($id);
     }
 
     public function createItem(array $details)
@@ -45,4 +46,10 @@ class PackageRepository implements TvNetRepositoryInterface
 
         return true;
     }
+
+    public function getPackagesWithService(): Collection|array
+    {
+        return Package::with('services')->get();
+    }
+
 }
