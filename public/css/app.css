@@ -476,13 +476,14 @@ li{
     width: 100%;
 }
 
-.home-content-container .available-container div {
-    padding: 0 150px;
+.home-content-container .available-container .locations-container {
+    margin-left: 150px;
 }
 
 .home-content-container .available-container .map-container {
     width: 400px;
     height: 400px;
+    margin-right: 150px;
 }
 
 
