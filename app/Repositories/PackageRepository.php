@@ -49,7 +49,7 @@ class PackageRepository implements TvNetRepositoryInterface
 
     public function getPackagesWithService(): Collection|array
     {
-        return Package::with('services')->get();
+        return Package::with('services')->orderBy('id', 'desc')->get();
     }
 
 }
