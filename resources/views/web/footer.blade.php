@@ -1,14 +1,11 @@
 @php
     $menuArray = [
         'service' => 'Ծառայություններ',
-        'privacy' =>  'Գաղտնիություն',
-        'blog' =>  'Բլոգ',
         'web.reports' =>  'Հաշվետվություններ'
     ];
 
     $menuArray2 = [
         'about' => 'Հետադարձ կապ',
-        'jobs' =>  'Աշխատանքներ',
         'packages' =>  'Փաթեթներ'
     ];
 
@@ -41,7 +38,7 @@
                 @endforeach
                 <li>
                     <a href="mailto:@">
-                        Mail Here
+                        Գրել նամակ
                     </a>
                 </li>
             </div>

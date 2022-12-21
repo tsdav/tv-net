@@ -2,13 +2,10 @@
 @section('content')
     <div class="home-content-container">
         <div class="home-background">
-            <div class='home-texts'>
-                <h1>Get Ready For Ultra Speed Internet</h1>
-                <h4>We Provide fast and quality internet</h4>
-            </div>
+
         </div>
         <div class="home-services">
-            <h1>Services</h1>
+            <h1>Ծառայություններ</h1>
             <div class="services-container">
                 @forelse($services as $service)
                 <div class="single-service">
@@ -27,68 +24,86 @@
             </div>
         </div>
         <div class="home-achievements">
-            <h1>Our Achievements</h1>
+            <h1>Մեր հաջողությունները</h1>
             <div class="achievements-container">
                 <div class="achievements-column-container">
                     <h2>100+</h2>
-                    <h4>TV Channels</h4>
+                    <h4>TV ալիք</h4>
                 </div>
                 <div class="achievements-column-container">
-                    <h2>100+</h2>
-                    <h4>TV Channels</h4>
+                    <h2>100MB/s</h2>
+                    <h4>Ինտերնետ</h4>
                 </div>
                 <div class="achievements-column-container">
-                    <h2>100+</h2>
-                    <h4>TV Channels</h4>
+                    <h2>IPTV</h2>
+                    <h4>CatchUp հնարավորություն</h4>
                 </div>
             </div>
         </div>
         <div class="home-choose">
-            <h1>Why choose us</h1>
+            <h1>Ինչու՞ ընտրել մեզ</h1>
             <div class="choose-container">
                 <div class="single-choose">
                     <img src="{{asset('/images/service.png')}}" alt="logo">
-                    <h2>High Quality</h2>
-                    <h3>We Provide a high quality internet TV and Digital Channels</h3>
+                    <h2>Մատչելիություն</h2>
+                    <h3>Մինչև 3 հեռուստացույց ընդհամենը 3000դր․</h3>
                 </div>
                 <div class="single-choose">
                     <img src="{{asset('/images/service.png')}}" alt="logo">
-                    <h2>High Quality</h2>
-                    <h3>We Provide a high quality internet TV and Digital Channels</h3>
+                    <h2>Գերարագ ինտերնետ</h2>
+                    <h3>Մենք մատակարարում ենք մինչև 100MB/s ինտերնետ</h3>
                 </div>
                 <div class="single-choose">
                     <img src="{{asset('/images/service.png')}}" alt="logo">
-                    <h2>High Quality</h2>
-                    <h3>We Provide a high quality internet TV and Digital Channels</h3>
+                    <h2>IPTV</h2>
+                    <h3>Նորույթ! CatchUp + TimeShift հնարավորություն</h3>
                 </div>
             </div>
         </div>
         <div class="home-available">
-            <h1>We available in</h1>
+            <h1>Հասանելիության քարտեզ</h1>
             <div class="available-container">
                 <div class="locations-container">
                     <div class="locations-block">
                         <div class="locations-block-items" style="padding-left: 0 !important;">
-                            <button>Yerevan</button>
+                            <button>Երևան</button>
                         </div>
                         <div class="icons-container locations-block-items">
                             <i class="fa fa-map-marker fa-2x"></i>
                             <i class="fa fa-map-marker fa-2x"></i>
+                            <i class="fa fa-map-marker fa-2x"></i>
                         </div>
                         <div class="locations-block-items">
-                            <h4>Ajapnyak</h4>
-                            <h4>Davtashen</h4>
+                            <h4>Աջափնյակ</h4>
+                            <h4>Դավթաշեն</h4>
+                            <h4>Զովունի</h4>
                         </div>
                     </div>
                     <div class="customer-container">
-                        <h1>Our Customer Center:</h1>
-                        <h4>Estonakan 12/1</h4>
+                        <h1>Մեր կոնտակտները:</h1>
+                        <h4>Էստոնական 12/1</h4>
                         <h4>
                             <i class='fa fa-phone'></i>
-                            <a href="tel:+37455101281">+374 55 101281</a>
+                            <a href="tel:+37494374737">+374 94 374737</a>
                         </h4>
                         <h4>
-                            <a href="mailto:@">Mail Here</a>
+                            <i class='fa fa-phone'></i>
+                            <a href="tel:+37410370808">+374 10 370808</a>
+                        </h4>
+                        <h4>
+                            <i class='fa fa-phone'></i>
+                            <a href="tel:+37499370808">+374 99 370808</a>
+                        </h4>
+                        <h4>
+                            <i class='fa fa-phone'></i>
+                            <a href="tel:+37455370808">+374 55 370808</a>
+                        </h4>
+                        <h4>
+                            <i class='fa fa-phone'></i>
+                            <a href="tel:+37460370808">+374 60 370808</a>
+                        </h4>
+                        <h4>
+                            <a href="mailto:@">Գրել նամակ</a>
                         </h4>
                     </div>
                 </div>

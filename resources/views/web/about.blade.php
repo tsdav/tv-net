@@ -10,7 +10,7 @@
                 <img src="{{ asset('images/service.png') }}" alt="">
             </div>
             <div class="main-about-content">
-                <h1>About us</h1>
+                <h1>Մեր մասին</h1>
                 <h2>TvNet is an internet Provider</h2>
                 <span>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text

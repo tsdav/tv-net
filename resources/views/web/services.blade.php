@@ -2,7 +2,7 @@
 @section('content')
     <div class="service-packages-content-container">
         <div class="service-package-content">
-            <h1>Services</h1>
+            <h1>Ծառայություններ</h1>
             <div class="services-packages">
                 @forelse($services as $service)
                     @include('web.service_data')

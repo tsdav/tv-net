@@ -2,7 +2,7 @@
 @section('content')
     <div class="service-packages-content-container">
         <div class="service-package-content">
-            <h1>Packages</h1>
+            <h1>Փաթեթներ</h1>
             @forelse($packages as $key => $serviceName)
                 <h2 class="packages-subTitle">{{ $key }}</h2>
                 <div class="services-packages packages">

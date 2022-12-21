@@ -29,7 +29,7 @@
         <div class="phone-container">
             <i class='fa fa-phone'></i>
             <a href="tel:+37455101281">
-                +374 55 101281
+                +374 94 374737
             </a>
         </div>
     </div>

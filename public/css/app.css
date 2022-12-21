@@ -266,9 +266,9 @@ li{
 }
 
 .home-content-container .home-background {
-    background-image: url("/images/background.png");
+    background-image: url("/images/home-background.png");
     width: 100%;
-    min-height: 100vh;
+    min-height: 75vh;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
